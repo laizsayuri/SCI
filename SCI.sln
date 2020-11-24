@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCI_Models", "SCI_Models\SCI_Models.csproj", "{6329EA70-49F4-49AC-8C95-2A10E10DE607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCI_Views", "SCI_Views\SCI_Views.csproj", "{6D9BBC16-3EF9-4154-BB1A-A317E035AAD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6329EA70-49F4-49AC-8C95-2A10E10DE607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6329EA70-49F4-49AC-8C95-2A10E10DE607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6329EA70-49F4-49AC-8C95-2A10E10DE607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6329EA70-49F4-49AC-8C95-2A10E10DE607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D9BBC16-3EF9-4154-BB1A-A317E035AAD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D9BBC16-3EF9-4154-BB1A-A317E035AAD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D9BBC16-3EF9-4154-BB1A-A317E035AAD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D9BBC16-3EF9-4154-BB1A-A317E035AAD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2298919-46F5-41CC-A3EE-6D2886383C3B}
+	EndGlobalSection
+EndGlobal
