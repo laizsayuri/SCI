@@ -22,7 +22,7 @@ namespace SCI_Models.Models
         public int Numeroingressos { get; set; }
         public string Descricao { get; set; }
 
-        public virtual Categorium CodcategoriaNavigation { get; set; }
+        public virtual Categoria CodcategoriaNavigation { get; set; }
         public virtual Local CodlocalNavigation { get; set; }
         public virtual ICollection<Ingresso> Ingressos { get; set; }
     }

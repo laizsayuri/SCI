@@ -17,7 +17,7 @@ namespace SCI_Models.Models
         {
         }
 
-        public virtual DbSet<Categorium> Categoria { get; set; }
+        public virtual DbSet<Categoria> Categoria { get; set; }
         public virtual DbSet<Cliente> Clientes { get; set; }
         public virtual DbSet<Evento> Eventos { get; set; }
         public virtual DbSet<Funcionario> Funcionarios { get; set; }
@@ -37,7 +37,7 @@ namespace SCI_Models.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Categorium>(entity =>
+            modelBuilder.Entity<Categoria>(entity =>
             {
                 entity.HasKey(e => e.Codcategoria)
                     .HasName("categoria_pkey");

@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace SCI_Models.Models
 {
-    public partial class Categorium
+    public partial class Categoria
     {
-        public Categorium()
+        public Categoria()
         {
             Eventos = new HashSet<Evento>();
         }
