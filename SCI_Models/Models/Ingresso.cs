@@ -10,8 +10,8 @@ namespace SCI_Models.Models
     {
         public Ingresso()
         {
-            Pagamentoboletos = new HashSet<Pagamentoboleto>();
-            Pagamentocartaos = new HashSet<Pagamentocartao>();
+            Pagamentoboletos = new HashSet<PagamentoBoleto>();
+            Pagamentocartaos = new HashSet<PagamentoCartao>();
         }
 
         public int Codingresso { get; set; }
@@ -21,7 +21,7 @@ namespace SCI_Models.Models
 
         public virtual Cliente CodclienteNavigation { get; set; }
         public virtual Evento CodeventoNavigation { get; set; }
-        public virtual ICollection<Pagamentoboleto> Pagamentoboletos { get; set; }
-        public virtual ICollection<Pagamentocartao> Pagamentocartaos { get; set; }
+        public virtual ICollection<PagamentoBoleto> Pagamentoboletos { get; set; }
+        public virtual ICollection<PagamentoCartao> Pagamentocartaos { get; set; }
     }
 }

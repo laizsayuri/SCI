@@ -23,8 +23,8 @@ namespace SCI_Models.Models
         public virtual DbSet<Funcionario> Funcionarios { get; set; }
         public virtual DbSet<Ingresso> Ingressos { get; set; }
         public virtual DbSet<Local> Locals { get; set; }
-        public virtual DbSet<Pagamentoboleto> Pagamentoboletos { get; set; }
-        public virtual DbSet<Pagamentocartao> Pagamentocartaos { get; set; }
+        public virtual DbSet<PagamentoBoleto> Pagamentoboletos { get; set; }
+        public virtual DbSet<PagamentoCartao> Pagamentocartaos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -241,7 +241,7 @@ namespace SCI_Models.Models
                     .HasColumnName("estado");
             });
 
-            modelBuilder.Entity<Pagamentoboleto>(entity =>
+            modelBuilder.Entity<PagamentoBoleto>(entity =>
             {
                 entity.HasKey(e => e.Codpagamento)
                     .HasName("pagamentoboleto_pkey");
@@ -272,7 +272,7 @@ namespace SCI_Models.Models
                     .HasConstraintName("pagamentoboleto_codingresso_fkey");
             });
 
-            modelBuilder.Entity<Pagamentocartao>(entity =>
+            modelBuilder.Entity<PagamentoCartao>(entity =>
             {
                 entity.HasKey(e => e.Codpagamento)
                     .HasName("pagamentocartao_pkey");

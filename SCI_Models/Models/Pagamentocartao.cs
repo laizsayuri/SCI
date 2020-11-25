@@ -6,7 +6,7 @@ using System.Collections;
 
 namespace SCI_Models.Models
 {
-    public partial class Pagamentocartao
+    public partial class PagamentoCartao
     {
         public int Codpagamento { get; set; }
         public int Codingresso { get; set; }
