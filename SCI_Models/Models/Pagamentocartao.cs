@@ -15,7 +15,7 @@ namespace SCI_Models.Models
         public string Numerocartao { get; set; }
         public string Datavalidade { get; set; }
         public string Codseguranca { get; set; }
-        public BitArray Transacaoaprovada { get; set; }
+        public bool Transacaoaprovada { get; set; }
 
         public virtual Ingresso CodingressoNavigation { get; set; }
     }

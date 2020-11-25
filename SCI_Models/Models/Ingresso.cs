@@ -17,7 +17,7 @@ namespace SCI_Models.Models
         public int Codingresso { get; set; }
         public int Codevento { get; set; }
         public int Codcliente { get; set; }
-        public BitArray Valorinteiro { get; set; }
+        public bool Valorinteiro { get; set; }
 
         public virtual Cliente CodclienteNavigation { get; set; }
         public virtual Evento CodeventoNavigation { get; set; }
