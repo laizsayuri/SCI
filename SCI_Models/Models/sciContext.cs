@@ -17,7 +17,7 @@ namespace SCI_Models.Models
         {
         }
 
-        public virtual DbSet<Categoria> Categoria { get; set; }
+        public virtual DbSet<Categoria> Categorias { get; set; }
         public virtual DbSet<Cliente> Clientes { get; set; }
         public virtual DbSet<Evento> Eventos { get; set; }
         public virtual DbSet<Funcionario> Funcionarios { get; set; }
@@ -156,7 +156,7 @@ namespace SCI_Models.Models
 
                 entity.Property(e => e.Admin)
                     .IsRequired()
-                    .HasColumnType("bit(1)")
+                    .HasColumnType("boolean")
                     .HasColumnName("admin");
 
                 entity.Property(e => e.Cpf)
@@ -197,7 +197,7 @@ namespace SCI_Models.Models
 
                 entity.Property(e => e.Valorinteiro)
                     .IsRequired()
-                    .HasColumnType("bit(1)")
+                    .HasColumnType("boolean")
                     .HasColumnName("valorinteiro");
 
                 entity.HasOne(d => d.CodclienteNavigation)
@@ -306,7 +306,7 @@ namespace SCI_Models.Models
 
                 entity.Property(e => e.Transacaoaprovada)
                     .IsRequired()
-                    .HasColumnType("bit(1)")
+                    .HasColumnType("boolean")
                     .HasColumnName("transacaoaprovada");
 
                 entity.Property(e => e.Valorapagar).HasColumnName("valorapagar");
