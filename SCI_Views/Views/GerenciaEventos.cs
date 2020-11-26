@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SCI_Views
+namespace SCI_Views.Views
 {
-    public partial class Form1 : Form
+    public partial class GerenciaEventos : Form
     {
-        public Form1()
+        public GerenciaEventos()
         {
             InitializeComponent();
         }
