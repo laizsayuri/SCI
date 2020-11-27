@@ -111,6 +111,9 @@ insert into categoria (nome) values ('Rap');
 insert into local (endereco, cidade, estado) values ('Rua Buenos Aires, 1270','Curitiba','PR');
 insert into local (endereco, cidade, estado) values ('Rua Machade de Carvalho, 543','São Paulo','SP');
 
+insert into evento (codcategoria, codlocal, nome, artista, data, valoringresso, numeroingressos, descricao, liberado)
+values (1,1,'Coming Up','Paul McCartney','2021-03-30',650,10000,'Turnê Mundial Paul McCartney',true);
+
 ```
 
 - Dentro do projeto, em SCI,Model > Model > sciContext, altere se necessário as configurações de conexão com o banco. Agora basta compilar e executar o projeto SCI_Views. 
