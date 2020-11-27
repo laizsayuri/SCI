@@ -36,12 +36,15 @@
 			// 
 			// buttonFuncionarios
 			// 
+			this.buttonFuncionarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.buttonFuncionarios.Location = new System.Drawing.Point(41, 51);
 			this.buttonFuncionarios.Name = "buttonFuncionarios";
 			this.buttonFuncionarios.Size = new System.Drawing.Size(150, 23);
 			this.buttonFuncionarios.TabIndex = 0;
 			this.buttonFuncionarios.Text = "Gerenciar Funcionários";
-			this.buttonFuncionarios.UseVisualStyleBackColor = true;
+			this.buttonFuncionarios.UseVisualStyleBackColor = false;
+			this.buttonFuncionarios.Click += new System.EventHandler(this.buttonFuncionarios_Click);
 			// 
 			// labelHello
 			// 
@@ -54,33 +57,43 @@
 			// 
 			// buttonClientes
 			// 
+			this.buttonClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonClientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.buttonClientes.Location = new System.Drawing.Point(41, 96);
 			this.buttonClientes.Name = "buttonClientes";
 			this.buttonClientes.Size = new System.Drawing.Size(150, 23);
 			this.buttonClientes.TabIndex = 2;
 			this.buttonClientes.Text = "Gerenciar Clientes";
-			this.buttonClientes.UseVisualStyleBackColor = true;
+			this.buttonClientes.UseVisualStyleBackColor = false;
+			this.buttonClientes.Click += new System.EventHandler(this.buttonClientes_Click);
 			// 
 			// buttonEventos
 			// 
+			this.buttonEventos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonEventos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.buttonEventos.Location = new System.Drawing.Point(41, 141);
 			this.buttonEventos.Name = "buttonEventos";
 			this.buttonEventos.Size = new System.Drawing.Size(150, 23);
 			this.buttonEventos.TabIndex = 3;
 			this.buttonEventos.Text = "Gerenciar Eventos";
-			this.buttonEventos.UseVisualStyleBackColor = true;
+			this.buttonEventos.UseVisualStyleBackColor = false;
+			this.buttonEventos.Click += new System.EventHandler(this.buttonEventos_Click);
 			// 
 			// AdminMenuForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.ClientSize = new System.Drawing.Size(232, 191);
 			this.Controls.Add(this.buttonEventos);
 			this.Controls.Add(this.buttonClientes);
 			this.Controls.Add(this.labelHello);
 			this.Controls.Add(this.buttonFuncionarios);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
 			this.Name = "AdminMenuForm";
 			this.Text = "Menu";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminMenuForm_FormClosing);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

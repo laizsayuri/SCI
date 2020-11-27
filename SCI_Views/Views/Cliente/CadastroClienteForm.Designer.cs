@@ -1,6 +1,6 @@
 ﻿namespace SCI_Views.Views
 {
-	partial class CadastroClienteForm
+	public partial class CadastroClienteForm : FormBase
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -43,35 +43,46 @@
 			this.textBoxCpf = new System.Windows.Forms.TextBox();
 			this.textBoxTelefone = new System.Windows.Forms.TextBox();
 			this.textBoxSenha = new System.Windows.Forms.TextBox();
-			this.label6 = new System.Windows.Forms.Label();
+			this.labelSenha = new System.Windows.Forms.Label();
+			this.buttonExcluir = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// buttonAlterarSenha
 			// 
-			this.buttonAlterarSenha.Location = new System.Drawing.Point(15, 379);
+			this.buttonAlterarSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonAlterarSenha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonAlterarSenha.Location = new System.Drawing.Point(15, 360);
 			this.buttonAlterarSenha.Name = "buttonAlterarSenha";
 			this.buttonAlterarSenha.Size = new System.Drawing.Size(125, 23);
-			this.buttonAlterarSenha.TabIndex = 0;
+			this.buttonAlterarSenha.TabIndex = 18;
 			this.buttonAlterarSenha.Text = "Alterar Senha";
-			this.buttonAlterarSenha.UseVisualStyleBackColor = true;
+			this.buttonAlterarSenha.UseVisualStyleBackColor = false;
+			this.buttonAlterarSenha.Visible = false;
+			this.buttonAlterarSenha.Click += new System.EventHandler(this.buttonAlterarSenha_Click);
 			// 
 			// buttonSalvar
 			// 
-			this.buttonSalvar.Location = new System.Drawing.Point(397, 379);
+			this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonSalvar.Location = new System.Drawing.Point(397, 392);
 			this.buttonSalvar.Name = "buttonSalvar";
 			this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
-			this.buttonSalvar.TabIndex = 2;
+			this.buttonSalvar.TabIndex = 16;
 			this.buttonSalvar.Text = "Salvar";
-			this.buttonSalvar.UseVisualStyleBackColor = true;
+			this.buttonSalvar.UseVisualStyleBackColor = false;
+			this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
 			// 
 			// buttonCancelar
 			// 
-			this.buttonCancelar.Location = new System.Drawing.Point(316, 379);
+			this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonCancelar.Location = new System.Drawing.Point(316, 392);
 			this.buttonCancelar.Name = "buttonCancelar";
 			this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
-			this.buttonCancelar.TabIndex = 3;
+			this.buttonCancelar.TabIndex = 17;
 			this.buttonCancelar.Text = "Cancelar";
-			this.buttonCancelar.UseVisualStyleBackColor = true;
+			this.buttonCancelar.UseVisualStyleBackColor = false;
+			this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
 			// 
 			// label1
 			// 
@@ -130,14 +141,14 @@
 			this.textBoxEmail.Location = new System.Drawing.Point(139, 256);
 			this.textBoxEmail.Name = "textBoxEmail";
 			this.textBoxEmail.Size = new System.Drawing.Size(333, 23);
-			this.textBoxEmail.TabIndex = 11;
+			this.textBoxEmail.TabIndex = 14;
 			// 
 			// dateTimePickerData
 			// 
 			this.dateTimePickerData.Location = new System.Drawing.Point(139, 158);
 			this.dateTimePickerData.Name = "dateTimePickerData";
 			this.dateTimePickerData.Size = new System.Drawing.Size(333, 23);
-			this.dateTimePickerData.TabIndex = 14;
+			this.dateTimePickerData.TabIndex = 12;
 			// 
 			// label7
 			// 
@@ -153,14 +164,14 @@
 			this.textBoxCpf.Location = new System.Drawing.Point(139, 113);
 			this.textBoxCpf.Name = "textBoxCpf";
 			this.textBoxCpf.Size = new System.Drawing.Size(333, 23);
-			this.textBoxCpf.TabIndex = 17;
+			this.textBoxCpf.TabIndex = 11;
 			// 
 			// textBoxTelefone
 			// 
 			this.textBoxTelefone.Location = new System.Drawing.Point(139, 207);
 			this.textBoxTelefone.Name = "textBoxTelefone";
 			this.textBoxTelefone.Size = new System.Drawing.Size(333, 23);
-			this.textBoxTelefone.TabIndex = 18;
+			this.textBoxTelefone.TabIndex = 13;
 			// 
 			// textBoxSenha
 			// 
@@ -168,24 +179,39 @@
 			this.textBoxSenha.Name = "textBoxSenha";
 			this.textBoxSenha.PasswordChar = '*';
 			this.textBoxSenha.Size = new System.Drawing.Size(333, 23);
-			this.textBoxSenha.TabIndex = 20;
+			this.textBoxSenha.TabIndex = 15;
 			// 
-			// label6
+			// labelSenha
 			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(15, 306);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(39, 15);
-			this.label6.TabIndex = 19;
-			this.label6.Text = "Senha";
+			this.labelSenha.AutoSize = true;
+			this.labelSenha.Location = new System.Drawing.Point(15, 306);
+			this.labelSenha.Name = "labelSenha";
+			this.labelSenha.Size = new System.Drawing.Size(39, 15);
+			this.labelSenha.TabIndex = 19;
+			this.labelSenha.Text = "Senha";
+			// 
+			// buttonExcluir
+			// 
+			this.buttonExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonExcluir.Location = new System.Drawing.Point(15, 392);
+			this.buttonExcluir.Name = "buttonExcluir";
+			this.buttonExcluir.Size = new System.Drawing.Size(150, 23);
+			this.buttonExcluir.TabIndex = 19;
+			this.buttonExcluir.Text = "Excluir meu Cadastro";
+			this.buttonExcluir.UseVisualStyleBackColor = false;
+			this.buttonExcluir.Visible = false;
+			this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
 			// 
 			// CadastroClienteForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.ClientSize = new System.Drawing.Size(487, 427);
+			this.Controls.Add(this.buttonExcluir);
 			this.Controls.Add(this.textBoxSenha);
-			this.Controls.Add(this.label6);
+			this.Controls.Add(this.labelSenha);
 			this.Controls.Add(this.textBoxTelefone);
 			this.Controls.Add(this.textBoxCpf);
 			this.Controls.Add(this.label7);
@@ -200,6 +226,8 @@
 			this.Controls.Add(this.buttonCancelar);
 			this.Controls.Add(this.buttonSalvar);
 			this.Controls.Add(this.buttonAlterarSenha);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
 			this.Name = "CadastroClienteForm";
 			this.Text = "Cadastrar Cliente";
 			this.ResumeLayout(false);
@@ -224,6 +252,7 @@
 		private System.Windows.Forms.TextBox textBoxCpf;
 		private System.Windows.Forms.TextBox textBoxTelefone;
 		private System.Windows.Forms.TextBox textBoxSenha;
-		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label labelSenha;
+		private System.Windows.Forms.Button buttonExcluir;
 	}
 }

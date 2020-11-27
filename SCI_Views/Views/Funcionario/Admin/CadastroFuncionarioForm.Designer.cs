@@ -34,28 +34,34 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.textBoxNome = new System.Windows.Forms.TextBox();
-			this.textBoxArtista = new System.Windows.Forms.TextBox();
-			this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
+			this.textBoxEmail = new System.Windows.Forms.TextBox();
 			this.label7 = new System.Windows.Forms.Label();
+			this.textBoxCpf = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// buttonSalvar
 			// 
+			this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.buttonSalvar.Location = new System.Drawing.Point(396, 205);
 			this.buttonSalvar.Name = "buttonSalvar";
 			this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
 			this.buttonSalvar.TabIndex = 2;
 			this.buttonSalvar.Text = "Salvar";
-			this.buttonSalvar.UseVisualStyleBackColor = true;
+			this.buttonSalvar.UseVisualStyleBackColor = false;
+			this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
 			// 
 			// buttonCancelar
 			// 
+			this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.buttonCancelar.Location = new System.Drawing.Point(315, 205);
 			this.buttonCancelar.Name = "buttonCancelar";
 			this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
 			this.buttonCancelar.TabIndex = 3;
 			this.buttonCancelar.Text = "Cancelar";
-			this.buttonCancelar.UseVisualStyleBackColor = true;
+			this.buttonCancelar.UseVisualStyleBackColor = false;
+			this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
 			// 
 			// label1
 			// 
@@ -91,20 +97,12 @@
 			this.textBoxNome.Size = new System.Drawing.Size(333, 23);
 			this.textBoxNome.TabIndex = 10;
 			// 
-			// textBoxArtista
+			// textBoxEmail
 			// 
-			this.textBoxArtista.Location = new System.Drawing.Point(136, 96);
-			this.textBoxArtista.Name = "textBoxArtista";
-			this.textBoxArtista.Size = new System.Drawing.Size(333, 23);
-			this.textBoxArtista.TabIndex = 11;
-			// 
-			// comboBoxCategoria
-			// 
-			this.comboBoxCategoria.FormattingEnabled = true;
-			this.comboBoxCategoria.Location = new System.Drawing.Point(136, 140);
-			this.comboBoxCategoria.Name = "comboBoxCategoria";
-			this.comboBoxCategoria.Size = new System.Drawing.Size(333, 23);
-			this.comboBoxCategoria.TabIndex = 12;
+			this.textBoxEmail.Location = new System.Drawing.Point(136, 96);
+			this.textBoxEmail.Name = "textBoxEmail";
+			this.textBoxEmail.Size = new System.Drawing.Size(333, 23);
+			this.textBoxEmail.TabIndex = 11;
 			// 
 			// label7
 			// 
@@ -115,20 +113,30 @@
 			this.label7.TabIndex = 16;
 			this.label7.Text = "Cadastrar Funcionário";
 			// 
+			// textBoxCpf
+			// 
+			this.textBoxCpf.Location = new System.Drawing.Point(136, 140);
+			this.textBoxCpf.Name = "textBoxCpf";
+			this.textBoxCpf.Size = new System.Drawing.Size(333, 23);
+			this.textBoxCpf.TabIndex = 17;
+			// 
 			// CadastroFuncionarioForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.ClientSize = new System.Drawing.Size(487, 241);
+			this.Controls.Add(this.textBoxCpf);
 			this.Controls.Add(this.label7);
-			this.Controls.Add(this.comboBoxCategoria);
-			this.Controls.Add(this.textBoxArtista);
+			this.Controls.Add(this.textBoxEmail);
 			this.Controls.Add(this.textBoxNome);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.buttonCancelar);
 			this.Controls.Add(this.buttonSalvar);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
 			this.Name = "CadastroFuncionarioForm";
 			this.Text = "Cadastrar Funcionário";
 			this.ResumeLayout(false);
@@ -143,8 +151,8 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TextBox textBoxNome;
-		private System.Windows.Forms.TextBox textBoxArtista;
-		private System.Windows.Forms.ComboBox comboBoxCategoria;
+		private System.Windows.Forms.TextBox textBoxEmail;
 		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.TextBox textBoxCpf;
 	}
 }

@@ -44,32 +44,42 @@
 			// 
 			// buttonClientes
 			// 
+			this.buttonClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonClientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.buttonClientes.Location = new System.Drawing.Point(41, 57);
 			this.buttonClientes.Name = "buttonClientes";
 			this.buttonClientes.Size = new System.Drawing.Size(150, 23);
 			this.buttonClientes.TabIndex = 2;
 			this.buttonClientes.Text = "Gerenciar Clientes";
-			this.buttonClientes.UseVisualStyleBackColor = true;
+			this.buttonClientes.UseVisualStyleBackColor = false;
+			this.buttonClientes.Click += new System.EventHandler(this.buttonClientes_Click);
 			// 
 			// button1
 			// 
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button1.Location = new System.Drawing.Point(41, 106);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(150, 23);
 			this.button1.TabIndex = 3;
 			this.button1.Text = "Gerenciar Eventos";
-			this.button1.UseVisualStyleBackColor = true;
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// FuncionarioMenuForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.ClientSize = new System.Drawing.Size(232, 164);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.buttonClientes);
 			this.Controls.Add(this.labelHello);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
 			this.Name = "FuncionarioMenuForm";
 			this.Text = "Menu";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FuncionarioMenuForm_FormClosing);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

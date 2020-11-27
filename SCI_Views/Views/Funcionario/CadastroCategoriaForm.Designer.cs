@@ -31,8 +31,8 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.textBoxNome = new System.Windows.Forms.TextBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
+			this.buttonSalvar = new System.Windows.Forms.Button();
+			this.buttonCancelar = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -60,34 +60,43 @@
 			this.textBoxNome.Size = new System.Drawing.Size(281, 23);
 			this.textBoxNome.TabIndex = 4;
 			// 
-			// button1
+			// buttonSalvar
 			// 
-			this.button1.Location = new System.Drawing.Point(338, 131);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 7;
-			this.button1.Text = "Salvar";
-			this.button1.UseVisualStyleBackColor = true;
+			this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonSalvar.Location = new System.Drawing.Point(338, 131);
+			this.buttonSalvar.Name = "buttonSalvar";
+			this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
+			this.buttonSalvar.TabIndex = 7;
+			this.buttonSalvar.Text = "Salvar";
+			this.buttonSalvar.UseVisualStyleBackColor = false;
+			this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
 			// 
-			// button2
+			// buttonCancelar
 			// 
-			this.button2.Location = new System.Drawing.Point(257, 131);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
-			this.button2.TabIndex = 8;
-			this.button2.Text = "Cancelar";
-			this.button2.UseVisualStyleBackColor = true;
+			this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonCancelar.Location = new System.Drawing.Point(257, 131);
+			this.buttonCancelar.Name = "buttonCancelar";
+			this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+			this.buttonCancelar.TabIndex = 8;
+			this.buttonCancelar.Text = "Cancelar";
+			this.buttonCancelar.UseVisualStyleBackColor = false;
+			this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
 			// 
 			// CadastroCategoriaForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.ClientSize = new System.Drawing.Size(425, 171);
-			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.buttonCancelar);
+			this.Controls.Add(this.buttonSalvar);
 			this.Controls.Add(this.textBoxNome);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
 			this.Name = "CadastroCategoriaForm";
 			this.Text = "Cadastrar Categoria";
 			this.ResumeLayout(false);
@@ -98,8 +107,8 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox textBoxNome;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button buttonSalvar;
+		private System.Windows.Forms.Button buttonCancelar;
 
 		#endregion
 	}

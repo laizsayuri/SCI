@@ -32,29 +32,36 @@
 			this.buttonCancelar = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
-			this.textBoxNome = new System.Windows.Forms.TextBox();
-			this.textBoxArtista = new System.Windows.Forms.TextBox();
+			this.textBoxValor = new System.Windows.Forms.TextBox();
+			this.textBoxQuantidade = new System.Windows.Forms.TextBox();
 			this.label7 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
+			this.buttonLiberarVenda = new System.Windows.Forms.Button();
+			this.buttonOk = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// buttonSalvar
 			// 
+			this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.buttonSalvar.Location = new System.Drawing.Point(397, 185);
 			this.buttonSalvar.Name = "buttonSalvar";
 			this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
 			this.buttonSalvar.TabIndex = 2;
 			this.buttonSalvar.Text = "Salvar";
-			this.buttonSalvar.UseVisualStyleBackColor = true;
+			this.buttonSalvar.UseVisualStyleBackColor = false;
+			this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
 			// 
 			// buttonCancelar
 			// 
+			this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.buttonCancelar.Location = new System.Drawing.Point(316, 185);
 			this.buttonCancelar.Name = "buttonCancelar";
 			this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
 			this.buttonCancelar.TabIndex = 3;
 			this.buttonCancelar.Text = "Cancelar";
-			this.buttonCancelar.UseVisualStyleBackColor = true;
+			this.buttonCancelar.UseVisualStyleBackColor = false;
+			this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
 			// 
 			// label1
 			// 
@@ -74,19 +81,19 @@
 			this.label4.TabIndex = 7;
 			this.label4.Text = "Quantidade";
 			// 
-			// textBoxNome
+			// textBoxValor
 			// 
-			this.textBoxNome.Location = new System.Drawing.Point(139, 68);
-			this.textBoxNome.Name = "textBoxNome";
-			this.textBoxNome.Size = new System.Drawing.Size(333, 23);
-			this.textBoxNome.TabIndex = 10;
+			this.textBoxValor.Location = new System.Drawing.Point(139, 68);
+			this.textBoxValor.Name = "textBoxValor";
+			this.textBoxValor.Size = new System.Drawing.Size(333, 23);
+			this.textBoxValor.TabIndex = 10;
 			// 
-			// textBoxArtista
+			// textBoxQuantidade
 			// 
-			this.textBoxArtista.Location = new System.Drawing.Point(139, 113);
-			this.textBoxArtista.Name = "textBoxArtista";
-			this.textBoxArtista.Size = new System.Drawing.Size(333, 23);
-			this.textBoxArtista.TabIndex = 11;
+			this.textBoxQuantidade.Location = new System.Drawing.Point(139, 113);
+			this.textBoxQuantidade.Name = "textBoxQuantidade";
+			this.textBoxQuantidade.Size = new System.Drawing.Size(333, 23);
+			this.textBoxQuantidade.TabIndex = 11;
 			// 
 			// label7
 			// 
@@ -97,28 +104,48 @@
 			this.label7.TabIndex = 16;
 			this.label7.Text = "Gerar Ingressos";
 			// 
-			// button1
+			// buttonLiberarVenda
 			// 
-			this.button1.Location = new System.Drawing.Point(15, 185);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(125, 23);
-			this.button1.TabIndex = 17;
-			this.button1.Text = "Liberar Venda";
-			this.button1.UseVisualStyleBackColor = true;
+			this.buttonLiberarVenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonLiberarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonLiberarVenda.Location = new System.Drawing.Point(15, 185);
+			this.buttonLiberarVenda.Name = "buttonLiberarVenda";
+			this.buttonLiberarVenda.Size = new System.Drawing.Size(125, 23);
+			this.buttonLiberarVenda.TabIndex = 17;
+			this.buttonLiberarVenda.Text = "Liberar Venda";
+			this.buttonLiberarVenda.UseVisualStyleBackColor = false;
+			this.buttonLiberarVenda.Click += new System.EventHandler(this.buttonLiberarBenda_Click);
+			// 
+			// buttonOk
+			// 
+			this.buttonOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonOk.Location = new System.Drawing.Point(397, 185);
+			this.buttonOk.Name = "buttonOk";
+			this.buttonOk.Size = new System.Drawing.Size(75, 23);
+			this.buttonOk.TabIndex = 18;
+			this.buttonOk.Text = "OK";
+			this.buttonOk.UseVisualStyleBackColor = false;
+			this.buttonOk.Visible = false;
+			this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
 			// 
 			// CadastroIngressosForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.ClientSize = new System.Drawing.Size(487, 227);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.buttonOk);
+			this.Controls.Add(this.buttonLiberarVenda);
 			this.Controls.Add(this.label7);
-			this.Controls.Add(this.textBoxArtista);
-			this.Controls.Add(this.textBoxNome);
+			this.Controls.Add(this.textBoxQuantidade);
+			this.Controls.Add(this.textBoxValor);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.buttonCancelar);
 			this.Controls.Add(this.buttonSalvar);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
 			this.Name = "CadastroIngressosForm";
 			this.Text = "Gerar Ingressos";
 			this.ResumeLayout(false);
@@ -131,9 +158,10 @@
 		private System.Windows.Forms.Button buttonCancelar;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.TextBox textBoxNome;
-		private System.Windows.Forms.TextBox textBoxArtista;
+		private System.Windows.Forms.TextBox textBoxValor;		
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button buttonLiberarVenda;
+		private System.Windows.Forms.TextBox textBoxQuantidade;
+		private System.Windows.Forms.Button buttonOk;
 	}
 }

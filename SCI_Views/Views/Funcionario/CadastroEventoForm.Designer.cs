@@ -49,39 +49,51 @@
 			// 
 			// buttonCadastroCategoria
 			// 
+			this.buttonCadastroCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonCadastroCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.buttonCadastroCategoria.Location = new System.Drawing.Point(9, 393);
 			this.buttonCadastroCategoria.Name = "buttonCadastroCategoria";
 			this.buttonCadastroCategoria.Size = new System.Drawing.Size(125, 23);
 			this.buttonCadastroCategoria.TabIndex = 0;
 			this.buttonCadastroCategoria.Text = "Cadastrar Categoria";
-			this.buttonCadastroCategoria.UseVisualStyleBackColor = true;
+			this.buttonCadastroCategoria.UseVisualStyleBackColor = false;
+			this.buttonCadastroCategoria.Click += new System.EventHandler(this.buttonCadastroCategoria_Click);
 			// 
 			// buttonCadastroLocal
 			// 
+			this.buttonCadastroLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonCadastroLocal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.buttonCadastroLocal.Location = new System.Drawing.Point(140, 393);
 			this.buttonCadastroLocal.Name = "buttonCadastroLocal";
 			this.buttonCadastroLocal.Size = new System.Drawing.Size(125, 23);
 			this.buttonCadastroLocal.TabIndex = 1;
 			this.buttonCadastroLocal.Text = "Cadastrar Local";
-			this.buttonCadastroLocal.UseVisualStyleBackColor = true;
+			this.buttonCadastroLocal.UseVisualStyleBackColor = false;
+			this.buttonCadastroLocal.Click += new System.EventHandler(this.buttonCadastroLocal_Click);
 			// 
 			// buttonSalvar
 			// 
+			this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.buttonSalvar.Location = new System.Drawing.Point(394, 393);
 			this.buttonSalvar.Name = "buttonSalvar";
 			this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
-			this.buttonSalvar.TabIndex = 2;
+			this.buttonSalvar.TabIndex = 16;
 			this.buttonSalvar.Text = "Salvar";
-			this.buttonSalvar.UseVisualStyleBackColor = true;
+			this.buttonSalvar.UseVisualStyleBackColor = false;
+			this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
 			// 
 			// buttonCancelar
 			// 
+			this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.buttonCancelar.Location = new System.Drawing.Point(313, 393);
 			this.buttonCancelar.Name = "buttonCancelar";
 			this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
-			this.buttonCancelar.TabIndex = 3;
+			this.buttonCancelar.TabIndex = 17;
 			this.buttonCancelar.Text = "Cancelar";
-			this.buttonCancelar.UseVisualStyleBackColor = true;
+			this.buttonCancelar.UseVisualStyleBackColor = false;
+			this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
 			// 
 			// label1
 			// 
@@ -153,6 +165,9 @@
 			// 
 			// comboBoxCategoria
 			// 
+			this.comboBoxCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.comboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxCategoria.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.comboBoxCategoria.FormattingEnabled = true;
 			this.comboBoxCategoria.Location = new System.Drawing.Point(136, 135);
 			this.comboBoxCategoria.Name = "comboBoxCategoria";
@@ -161,6 +176,8 @@
 			// 
 			// comboBoxLocal
 			// 
+			this.comboBoxLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.comboBoxLocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxLocal.FormattingEnabled = true;
 			this.comboBoxLocal.Location = new System.Drawing.Point(136, 181);
 			this.comboBoxLocal.Name = "comboBoxLocal";
@@ -195,6 +212,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.ClientSize = new System.Drawing.Size(487, 431);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.textBoxDescricao);
@@ -213,6 +231,8 @@
 			this.Controls.Add(this.buttonSalvar);
 			this.Controls.Add(this.buttonCadastroLocal);
 			this.Controls.Add(this.buttonCadastroCategoria);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
 			this.Name = "CadastroEventoForm";
 			this.Text = "Cadastrar Evento";
 			this.ResumeLayout(false);

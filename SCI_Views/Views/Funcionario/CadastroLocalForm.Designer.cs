@@ -35,8 +35,8 @@
 			this.textBoxCidade = new System.Windows.Forms.TextBox();
 			this.textBoxEndereco = new System.Windows.Forms.TextBox();
 			this.comboBoxEstado = new System.Windows.Forms.ComboBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
+			this.buttonSalvar = new System.Windows.Forms.Button();
+			this.buttonCancelar = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -87,41 +87,50 @@
 			this.textBoxEndereco.Location = new System.Drawing.Point(113, 149);
 			this.textBoxEndereco.Name = "textBoxEndereco";
 			this.textBoxEndereco.Size = new System.Drawing.Size(281, 23);
-			this.textBoxEndereco.TabIndex = 5;
+			this.textBoxEndereco.TabIndex = 6;
 			// 
 			// comboBoxEstado
 			// 
+			this.comboBoxEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.comboBoxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxEstado.FormattingEnabled = true;
 			this.comboBoxEstado.Location = new System.Drawing.Point(113, 107);
 			this.comboBoxEstado.Name = "comboBoxEstado";
 			this.comboBoxEstado.Size = new System.Drawing.Size(281, 23);
-			this.comboBoxEstado.TabIndex = 6;
+			this.comboBoxEstado.TabIndex = 5;
 			// 
-			// button1
+			// buttonSalvar
 			// 
-			this.button1.Location = new System.Drawing.Point(338, 210);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 7;
-			this.button1.Text = "Salvar";
-			this.button1.UseVisualStyleBackColor = true;
+			this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonSalvar.Location = new System.Drawing.Point(338, 210);
+			this.buttonSalvar.Name = "buttonSalvar";
+			this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
+			this.buttonSalvar.TabIndex = 7;
+			this.buttonSalvar.Text = "Salvar";
+			this.buttonSalvar.UseVisualStyleBackColor = false;
+			this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
 			// 
-			// button2
+			// buttonCancelar
 			// 
-			this.button2.Location = new System.Drawing.Point(257, 210);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
-			this.button2.TabIndex = 8;
-			this.button2.Text = "Cancelar";
-			this.button2.UseVisualStyleBackColor = true;
+			this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(196)))), ((int)(((byte)(57)))));
+			this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonCancelar.Location = new System.Drawing.Point(257, 210);
+			this.buttonCancelar.Name = "buttonCancelar";
+			this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+			this.buttonCancelar.TabIndex = 8;
+			this.buttonCancelar.Text = "Cancelar";
+			this.buttonCancelar.UseVisualStyleBackColor = false;
+			this.buttonCancelar.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// CadastroLocalForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
 			this.ClientSize = new System.Drawing.Size(425, 245);
-			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.buttonCancelar);
+			this.Controls.Add(this.buttonSalvar);
 			this.Controls.Add(this.comboBoxEstado);
 			this.Controls.Add(this.textBoxEndereco);
 			this.Controls.Add(this.textBoxCidade);
@@ -129,6 +138,8 @@
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
 			this.Name = "CadastroLocalForm";
 			this.Text = "Cadastrar Local";
 			this.ResumeLayout(false);
@@ -145,7 +156,7 @@
 		private System.Windows.Forms.TextBox textBoxCidade;
 		private System.Windows.Forms.TextBox textBoxEndereco;
 		private System.Windows.Forms.ComboBox comboBoxEstado;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button buttonSalvar;
+		private System.Windows.Forms.Button buttonCancelar;
 	}
 }

@@ -1,18 +1,30 @@
-﻿using System;
+﻿using SCI_Controllers.Controllers;
+using SCI_Models.Models;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 
 namespace SCI_Views.Views
 {
-    public partial class GerenciaClientesForm : Form
-    {
-        public GerenciaClientesForm()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class GerenciaClientesForm : FormBase
+	{
+		public List<Cliente> Clientes;
+		public ClienteController clienteController;
+
+		public GerenciaClientesForm()
+		{
+			clienteController = new ClienteController();
+			InitializeComponent();
+			PrepararDataGrid();
+		}
+
+		public void PrepararDataGrid()
+		{
+			List<Cliente> clientes = clienteController.GetAll();
+			dataGridView1.Rows.Clear();
+
+			foreach (var cliente in clientes)
+				dataGridView1.Rows.Add(new object[] { cliente.Nome, cliente.Cpf, cliente.Datanascimento.ToString("dd/MM/yyyy"), cliente.Telefone, cliente.Email });
+
+			dataGridView1.ClearSelection();
+		}
+	}
 }
