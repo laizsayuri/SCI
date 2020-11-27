@@ -18,5 +18,10 @@ namespace SCI_Models.Models
         public string Estado { get; set; }
 
         public virtual ICollection<Evento> Eventos { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Endereco}. {Cidade}/{Estado}";
+        }
     }
 }
