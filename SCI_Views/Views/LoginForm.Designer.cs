@@ -1,6 +1,6 @@
 ﻿namespace SCI_Views.Views
 {
-	partial class LoginForm : FormBase
+	partial class LoginForm
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -104,8 +104,7 @@
 			this.buttonLogin.Size = new System.Drawing.Size(75, 23);
 			this.buttonLogin.TabIndex = 7;
 			this.buttonLogin.Text = "Login";
-			this.buttonLogin.UseVisualStyleBackColor = false;
-			this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+			this.buttonLogin.UseVisualStyleBackColor = false;			
 			// 
 			// buttonCadastro
 			// 
@@ -116,8 +115,7 @@
 			this.buttonCadastro.Size = new System.Drawing.Size(150, 23);
 			this.buttonCadastro.TabIndex = 8;
 			this.buttonCadastro.Text = "Fazer Cadastro Cliente";
-			this.buttonCadastro.UseVisualStyleBackColor = false;
-			this.buttonCadastro.Click += new System.EventHandler(this.buttonCadastro_Click);
+			this.buttonCadastro.UseVisualStyleBackColor = false;			
 			// 
 			// LoginForm
 			// 
