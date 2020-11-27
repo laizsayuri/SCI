@@ -100,6 +100,10 @@ namespace SCI_Models.Models
 
                 entity.ToTable("evento");
 
+                entity.HasIndex(e => e.Codcategoria, "IX_evento_codcategoria");
+
+                entity.HasIndex(e => e.Codlocal, "IX_evento_codlocal");
+
                 entity.Property(e => e.Codevento)
                     .HasColumnName("codevento")
                     .UseIdentityAlwaysColumn();
@@ -120,6 +124,8 @@ namespace SCI_Models.Models
                 entity.Property(e => e.Descricao)
                     .HasMaxLength(500)
                     .HasColumnName("descricao");
+
+                entity.Property(e => e.Liberado).HasColumnName("liberado");
 
                 entity.Property(e => e.Nome)
                     .IsRequired()
@@ -154,10 +160,7 @@ namespace SCI_Models.Models
                     .HasColumnName("codfuncionario")
                     .UseIdentityAlwaysColumn();
 
-                entity.Property(e => e.Admin)
-                    .IsRequired()
-                    .HasColumnType("boolean")
-                    .HasColumnName("admin");
+                entity.Property(e => e.Admin).HasColumnName("admin");
 
                 entity.Property(e => e.Cpf)
                     .IsRequired()
@@ -187,6 +190,10 @@ namespace SCI_Models.Models
 
                 entity.ToTable("ingresso");
 
+                entity.HasIndex(e => e.Codcliente, "IX_ingresso_codcliente");
+
+                entity.HasIndex(e => e.Codevento, "IX_ingresso_codevento");
+
                 entity.Property(e => e.Codingresso)
                     .HasColumnName("codingresso")
                     .UseIdentityAlwaysColumn();
@@ -195,10 +202,7 @@ namespace SCI_Models.Models
 
                 entity.Property(e => e.Codevento).HasColumnName("codevento");
 
-                entity.Property(e => e.Valorinteiro)
-                    .IsRequired()
-                    .HasColumnType("boolean")
-                    .HasColumnName("valorinteiro");
+                entity.Property(e => e.Valorinteiro).HasColumnName("valorinteiro");
 
                 entity.HasOne(d => d.CodclienteNavigation)
                     .WithMany(p => p.Ingressos)
@@ -247,6 +251,8 @@ namespace SCI_Models.Models
 
                 entity.ToTable("pagamentoboleto");
 
+                entity.HasIndex(e => e.Codingresso, "IX_pagamentoboleto_codingresso");
+
                 entity.Property(e => e.Codpagamento)
                     .HasColumnName("codpagamento")
                     .UseIdentityAlwaysColumn();
@@ -278,6 +284,8 @@ namespace SCI_Models.Models
 
                 entity.ToTable("pagamentocartao");
 
+                entity.HasIndex(e => e.Codingresso, "IX_pagamentocartao_codingresso");
+
                 entity.Property(e => e.Codpagamento)
                     .HasColumnName("codpagamento")
                     .UseIdentityAlwaysColumn();
@@ -304,10 +312,7 @@ namespace SCI_Models.Models
                     .HasMaxLength(32)
                     .HasColumnName("numerocartao");
 
-                entity.Property(e => e.Transacaoaprovada)
-                    .IsRequired()
-                    .HasColumnType("boolean")
-                    .HasColumnName("transacaoaprovada");
+                entity.Property(e => e.Transacaoaprovada).HasColumnName("transacaoaprovada");
 
                 entity.Property(e => e.Valorapagar).HasColumnName("valorapagar");
 

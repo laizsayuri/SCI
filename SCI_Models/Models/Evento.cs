@@ -21,6 +21,7 @@ namespace SCI_Models.Models
         public decimal Valoringresso { get; set; }
         public int Numeroingressos { get; set; }
         public string Descricao { get; set; }
+        public bool Liberado { get; set; }
 
         public virtual Categoria CodcategoriaNavigation { get; set; }
         public virtual Local CodlocalNavigation { get; set; }
