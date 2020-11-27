@@ -7,7 +7,6 @@ namespace SCI_Views
 {
 	public static class Helper
 	{
-		
 		public static bool VerificaSeEstaVazio(this TextBox textBox) => string.IsNullOrEmpty(textBox.Text) || string.IsNullOrWhiteSpace(textBox.Text);
 
 		public static void ShowSucesso(string menssagem) => MessageBox.Show(menssagem, "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
