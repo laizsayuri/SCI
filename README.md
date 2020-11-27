@@ -116,6 +116,6 @@ values (1,1,'Coming Up','Paul McCartney','2021-03-30',650,10000,'Turnê Mundial 
 
 ```
 
-- Dentro do projeto, em SCI,Model > Model > sciContext, altere se necessário as configurações de conexão com o banco. Agora basta compilar e executar o projeto SCI_Views. 
+- Dentro do projeto, em SCI_Model > Model > sciContext, altere as configurações de conexão com o banco. Agora basta compilar e executar o projeto SCI_Views. 
 
 - As credenciais para logar como Admin são "admin@sci.com" e senha: "admin".
