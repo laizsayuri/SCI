@@ -27,7 +27,7 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent()
-		{
+		{			
 			this.labelHello = new System.Windows.Forms.Label();
 			this.buttonClientes = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
@@ -74,7 +74,7 @@
 			this.PerformLayout();
 
 		}
-
+		
 		private System.Windows.Forms.Label labelHello;
 		private System.Windows.Forms.Button buttonClientes;
 		private System.Windows.Forms.Button button1;

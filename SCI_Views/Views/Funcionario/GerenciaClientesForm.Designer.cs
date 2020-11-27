@@ -45,9 +45,10 @@
 			// labelTitle
 			// 
 			this.labelTitle.AutoSize = true;
-			this.labelTitle.Location = new System.Drawing.Point(12, 9);
+			this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.labelTitle.Location = new System.Drawing.Point(366, 4);
 			this.labelTitle.Name = "labelTitle";
-			this.labelTitle.Size = new System.Drawing.Size(49, 15);
+			this.labelTitle.Size = new System.Drawing.Size(61, 20);
 			this.labelTitle.TabIndex = 0;
 			this.labelTitle.Text = "Clientes";
 			// 
@@ -78,11 +79,11 @@
 			this.dataGridView1.AllowUserToOrderColumns = true;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-			this.dataGridViewTextBoxColumn3,
-			this.dataGridViewTextBoxColumn4,
-			this.dataGridViewTextBoxColumn5,
-			this.Telefone,
-			this.Email});
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.Telefone,
+            this.Email});
 			this.dataGridView1.Location = new System.Drawing.Point(12, 27);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowTemplate.Height = 25;

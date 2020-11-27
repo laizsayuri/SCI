@@ -4,70 +4,78 @@ using System.Linq;
 
 namespace SCI_Controllers.Controllers
 {
-    public class ClienteController
-    {
-        private readonly sciContext db;
+	public class ClienteController
+	{
+		private readonly sciContext db;
 
-        public ClienteController()
-        {
-            db = new sciContext();
-        }
+		public ClienteController()
+		{
+			db = new sciContext();
+		}
 
-        public void Save(Cliente cliente)
-        {
-            db.Clientes.Add(cliente);
-            db.SaveChanges();
-        }
+		public void Save(Cliente cliente)
+		{
+			cliente.Senha = cliente.Senha.ToMD5();
 
-        public void Edit(Cliente cliente)
-        {
-            Cliente entidadeSalva = db.Clientes.FirstOrDefault(e => e.Codcliente == cliente.Codcliente);
-            if(entidadeSalva != null)
-            {
-                entidadeSalva.Nome = cliente.Nome;
-                entidadeSalva.Cpf = cliente.Cpf;
-                entidadeSalva.Datanascimento = cliente.Datanascimento;
-                entidadeSalva.Telefone = cliente.Telefone;
-                entidadeSalva.Email = cliente.Email;
+			db.Clientes.Add(cliente);
 
-                db.SaveChanges();
-            }
-        }
+			db.SaveChanges();
+		}
 
-        public void EditSenha(Cliente cliente)
-        {
-            Cliente entidadeSalva = db.Clientes.FirstOrDefault(e => e.Codcliente == cliente.Codcliente);
+		public void Edit(Cliente cliente)
+		{
+			Cliente entidadeSalva = db.Clientes.FirstOrDefault(e => e.Codcliente == cliente.Codcliente);
+			if (entidadeSalva != null)
+			{
+				entidadeSalva.Nome = cliente.Nome;
+				entidadeSalva.Cpf = cliente.Cpf;
+				entidadeSalva.Datanascimento = cliente.Datanascimento;
+				entidadeSalva.Telefone = cliente.Telefone;
+				entidadeSalva.Email = cliente.Email;
 
-            if(entidadeSalva != null)
-            {
-                entidadeSalva.Senha = cliente.Senha;
+				db.SaveChanges();
+			}
+		}
 
-                db.SaveChanges();
-            }
-        }
+		public void EditSenha(Cliente cliente)
+		{
+			Cliente entidadeSalva = db.Clientes.FirstOrDefault(e => e.Codcliente == cliente.Codcliente);
+			if (entidadeSalva != null)
+			{
+				entidadeSalva.Senha = cliente.Senha.ToMD5();
 
-        public Cliente GetById(int CodCliente)
-        {
-            Cliente entidade = db.Clientes.FirstOrDefault(e => e.Codcliente == CodCliente);
+				db.SaveChanges();
+			}
+		}
 
-            return entidade;
-        }
+		public Cliente GetById(int CodCliente)
+		{
+			Cliente entidade = db.Clientes.FirstOrDefault(e => e.Codcliente == CodCliente);
 
-        public List<Cliente> GetAll()
-        {
-            return db.Clientes.ToList();
-        }
+			return entidade;
+		}
 
-        public void Remove(int CodCLiente)
-        {
-            Cliente entidadeSalva = db.Clientes.FirstOrDefault(e => e.Codcliente == CodCLiente);
+		public Cliente GetByEmailSenha(string email, string senha)
+		{
+			Cliente entidade = db.Clientes.FirstOrDefault(e => e.Email == email && e.Senha == senha.ToMD5());
 
-            if(entidadeSalva != null)
-            {
-                db.Clientes.Remove(entidadeSalva);
-                db.SaveChanges();
-            }
+			return entidade;
+		}
 
-        }
-    }
+		public List<Cliente> GetAll()
+		{
+			return db.Clientes.ToList();
+		}
+
+		public void Remove(int CodCliente)
+		{
+			Cliente entidadeSalva = db.Clientes.FirstOrDefault(e => e.Codcliente == CodCliente);
+			if (entidadeSalva != null)
+			{
+				db.Clientes.Remove(entidadeSalva);
+
+				db.SaveChanges();
+			}
+		}
+	}
 }

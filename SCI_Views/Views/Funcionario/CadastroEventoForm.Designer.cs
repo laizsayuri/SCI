@@ -1,34 +1,33 @@
-﻿
-namespace SCI_Views.Views
+﻿namespace SCI_Views.Views
 {
-    partial class CadastroEvento
-    {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class CadastroEventoForm
+	{
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Windows Form Designer generated code
+		#region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
 			this.buttonCadastroCategoria = new System.Windows.Forms.Button();
 			this.buttonCadastroLocal = new System.Windows.Forms.Button();
 			this.buttonSalvar = new System.Windows.Forms.Button();
@@ -50,7 +49,7 @@ namespace SCI_Views.Views
 			// 
 			// buttonCadastroCategoria
 			// 
-			this.buttonCadastroCategoria.Location = new System.Drawing.Point(216, 12);
+			this.buttonCadastroCategoria.Location = new System.Drawing.Point(9, 393);
 			this.buttonCadastroCategoria.Name = "buttonCadastroCategoria";
 			this.buttonCadastroCategoria.Size = new System.Drawing.Size(125, 23);
 			this.buttonCadastroCategoria.TabIndex = 0;
@@ -59,7 +58,7 @@ namespace SCI_Views.Views
 			// 
 			// buttonCadastroLocal
 			// 
-			this.buttonCadastroLocal.Location = new System.Drawing.Point(347, 12);
+			this.buttonCadastroLocal.Location = new System.Drawing.Point(140, 393);
 			this.buttonCadastroLocal.Name = "buttonCadastroLocal";
 			this.buttonCadastroLocal.Size = new System.Drawing.Size(125, 23);
 			this.buttonCadastroLocal.TabIndex = 1;
@@ -68,7 +67,7 @@ namespace SCI_Views.Views
 			// 
 			// buttonSalvar
 			// 
-			this.buttonSalvar.Location = new System.Drawing.Point(397, 415);
+			this.buttonSalvar.Location = new System.Drawing.Point(394, 393);
 			this.buttonSalvar.Name = "buttonSalvar";
 			this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
 			this.buttonSalvar.TabIndex = 2;
@@ -77,7 +76,7 @@ namespace SCI_Views.Views
 			// 
 			// buttonCancelar
 			// 
-			this.buttonCancelar.Location = new System.Drawing.Point(316, 415);
+			this.buttonCancelar.Location = new System.Drawing.Point(313, 393);
 			this.buttonCancelar.Name = "buttonCancelar";
 			this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
 			this.buttonCancelar.TabIndex = 3;
@@ -87,7 +86,7 @@ namespace SCI_Views.Views
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(15, 71);
+			this.label1.Location = new System.Drawing.Point(12, 49);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(96, 15);
 			this.label1.TabIndex = 4;
@@ -96,7 +95,7 @@ namespace SCI_Views.Views
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(15, 160);
+			this.label2.Location = new System.Drawing.Point(12, 138);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(58, 15);
 			this.label2.TabIndex = 5;
@@ -105,7 +104,7 @@ namespace SCI_Views.Views
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(15, 206);
+			this.label3.Location = new System.Drawing.Point(12, 184);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(35, 15);
 			this.label3.TabIndex = 6;
@@ -114,7 +113,7 @@ namespace SCI_Views.Views
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(15, 116);
+			this.label4.Location = new System.Drawing.Point(12, 94);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(41, 15);
 			this.label4.TabIndex = 7;
@@ -123,7 +122,7 @@ namespace SCI_Views.Views
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(15, 252);
+			this.label5.Location = new System.Drawing.Point(12, 230);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(87, 15);
 			this.label5.TabIndex = 8;
@@ -132,7 +131,7 @@ namespace SCI_Views.Views
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(15, 293);
+			this.label6.Location = new System.Drawing.Point(12, 271);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(58, 15);
 			this.label6.TabIndex = 9;
@@ -140,14 +139,14 @@ namespace SCI_Views.Views
 			// 
 			// textBoxNome
 			// 
-			this.textBoxNome.Location = new System.Drawing.Point(139, 68);
+			this.textBoxNome.Location = new System.Drawing.Point(136, 46);
 			this.textBoxNome.Name = "textBoxNome";
 			this.textBoxNome.Size = new System.Drawing.Size(333, 23);
 			this.textBoxNome.TabIndex = 10;
 			// 
 			// textBoxArtista
 			// 
-			this.textBoxArtista.Location = new System.Drawing.Point(139, 113);
+			this.textBoxArtista.Location = new System.Drawing.Point(136, 91);
 			this.textBoxArtista.Name = "textBoxArtista";
 			this.textBoxArtista.Size = new System.Drawing.Size(333, 23);
 			this.textBoxArtista.TabIndex = 11;
@@ -155,7 +154,7 @@ namespace SCI_Views.Views
 			// comboBoxCategoria
 			// 
 			this.comboBoxCategoria.FormattingEnabled = true;
-			this.comboBoxCategoria.Location = new System.Drawing.Point(139, 157);
+			this.comboBoxCategoria.Location = new System.Drawing.Point(136, 135);
 			this.comboBoxCategoria.Name = "comboBoxCategoria";
 			this.comboBoxCategoria.Size = new System.Drawing.Size(333, 23);
 			this.comboBoxCategoria.TabIndex = 12;
@@ -163,21 +162,21 @@ namespace SCI_Views.Views
 			// comboBoxLocal
 			// 
 			this.comboBoxLocal.FormattingEnabled = true;
-			this.comboBoxLocal.Location = new System.Drawing.Point(139, 203);
+			this.comboBoxLocal.Location = new System.Drawing.Point(136, 181);
 			this.comboBoxLocal.Name = "comboBoxLocal";
 			this.comboBoxLocal.Size = new System.Drawing.Size(333, 23);
 			this.comboBoxLocal.TabIndex = 13;
 			// 
 			// dateTimePickerData
 			// 
-			this.dateTimePickerData.Location = new System.Drawing.Point(139, 246);
+			this.dateTimePickerData.Location = new System.Drawing.Point(136, 224);
 			this.dateTimePickerData.Name = "dateTimePickerData";
 			this.dateTimePickerData.Size = new System.Drawing.Size(333, 23);
 			this.dateTimePickerData.TabIndex = 14;
 			// 
 			// textBoxDescricao
 			// 
-			this.textBoxDescricao.Location = new System.Drawing.Point(139, 293);
+			this.textBoxDescricao.Location = new System.Drawing.Point(136, 271);
 			this.textBoxDescricao.Multiline = true;
 			this.textBoxDescricao.Name = "textBoxDescricao";
 			this.textBoxDescricao.Size = new System.Drawing.Size(333, 95);
@@ -186,17 +185,17 @@ namespace SCI_Views.Views
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(13, 12);
+			this.label7.Location = new System.Drawing.Point(204, 9);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(96, 15);
 			this.label7.TabIndex = 16;
 			this.label7.Text = "Cadastrar Evento";
 			// 
-			// CadastroEvento
+			// CadastroEventoForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(487, 450);
+			this.ClientSize = new System.Drawing.Size(487, 431);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.textBoxDescricao);
 			this.Controls.Add(this.dateTimePickerData);
@@ -214,7 +213,7 @@ namespace SCI_Views.Views
 			this.Controls.Add(this.buttonSalvar);
 			this.Controls.Add(this.buttonCadastroLocal);
 			this.Controls.Add(this.buttonCadastroCategoria);
-			this.Name = "CadastroEvento";
+			this.Name = "CadastroEventoForm";
 			this.Text = "Cadastrar Evento";
 			this.ResumeLayout(false);
 			this.PerformLayout();

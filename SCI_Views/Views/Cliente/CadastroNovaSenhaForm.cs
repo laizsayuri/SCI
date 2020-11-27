@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace SCI_Views.Views
 {
-    public partial class CadastroFuncionario : Form
+    public partial class CadastroNovaSenhaForm : Form
     {
-        public CadastroFuncionario()
+        public CadastroNovaSenhaForm()
         {
             InitializeComponent();
         }

@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace SCI_Views.Views
 {
-    public partial class GerenciaEventos : Form
+    public partial class GerenciaFuncionariosForm : Form
     {
-        public GerenciaEventos()
+        public GerenciaFuncionariosForm()
         {
             InitializeComponent();
         }

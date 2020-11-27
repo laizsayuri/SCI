@@ -44,6 +44,7 @@ namespace SCI_Controllers.Controllers
 		{
 			return db.Ingressos.ToList();
 		}
+
 		public void Remove(int CodIngresso)
 		{
 			Ingresso entidadeSalva = db.Ingressos.FirstOrDefault(e => e.Codingresso == CodIngresso);
@@ -55,4 +56,4 @@ namespace SCI_Controllers.Controllers
 			}
 		}
 	}
-}		
+}
