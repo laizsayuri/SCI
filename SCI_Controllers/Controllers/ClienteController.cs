@@ -7,22 +7,27 @@ namespace SCI_Controllers.Controllers
 	public class ClienteController
 	{
 		private readonly sciContext db;
+		private readonly IngressoController ingressoController;
 
 		public ClienteController()
 		{
+			ingressoController = new IngressoController();
 			db = new sciContext();
 		}
 
-		public void Save(Cliente cliente)
+		public RetornoOperacao Save(Cliente cliente)
 		{
-			cliente.Senha = cliente.Senha.ToMD5();
+			if (db.Clientes.Any(e => e.Email == cliente.Email) || db.Funcionarios.Any(e => e.Email == cliente.Email))
+				return new RetornoOperacao(false, "O email já está sendo usado!");
 
+			cliente.Senha = cliente.Senha.ToMD5();
 			db.Clientes.Add(cliente);
 
 			db.SaveChanges();
+			return new RetornoOperacao(true, "Cliente criado com sucesso!");
 		}
 
-		public void Edit(Cliente cliente)
+		public RetornoOperacao Edit(Cliente cliente)
 		{
 			Cliente entidadeSalva = db.Clientes.FirstOrDefault(e => e.Codcliente == cliente.Codcliente);
 			if (entidadeSalva != null)
@@ -35,6 +40,8 @@ namespace SCI_Controllers.Controllers
 
 				db.SaveChanges();
 			}
+
+			return new RetornoOperacao(true, "Cliente editado com Sucesso!");
 		}
 
 		public void EditSenha(Cliente cliente)
@@ -46,13 +53,6 @@ namespace SCI_Controllers.Controllers
 
 				db.SaveChanges();
 			}
-		}
-
-		public Cliente GetById(int CodCliente)
-		{
-			Cliente entidade = db.Clientes.FirstOrDefault(e => e.Codcliente == CodCliente);
-
-			return entidade;
 		}
 
 		public Cliente GetByEmailSenha(string email, string senha)
@@ -72,6 +72,7 @@ namespace SCI_Controllers.Controllers
 			Cliente entidadeSalva = db.Clientes.FirstOrDefault(e => e.Codcliente == CodCliente);
 			if (entidadeSalva != null)
 			{
+				ingressoController.RemoveByCodCliente(CodCliente);
 				db.Clientes.Remove(entidadeSalva);
 
 				db.SaveChanges();

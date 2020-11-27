@@ -13,47 +13,20 @@ namespace SCI_Controllers.Controllers
 			db = new sciContext();
 		}
 
-		public void Save(Local local)
+		public RetornoOperacao Save(Local local)
 		{
+			if (db.Locals.Any(l => l.Cidade == local.Cidade && l.Estado == local.Estado && l.Endereco == local.Endereco))
+				return new RetornoOperacao(false, "Esse local já se encontra cadastro no banco de dados!");
+
 			db.Locals.Add(local);
 
 			db.SaveChanges();
-		}
-
-		public void Edit(Local local)
-		{
-			Local entidadeSalva = db.Locals.FirstOrDefault(e => e.Codlocal == local.Codlocal);
-			if (entidadeSalva != null)
-			{
-				entidadeSalva.Endereco = local.Endereco;
-				entidadeSalva.Cidade = local.Cidade;
-				entidadeSalva.Estado = local.Estado;
-
-				db.SaveChanges();
-			}
-		}
-
-		public Local GetById(int CodLocal)
-		{
-			Local entidade = db.Locals.FirstOrDefault(e => e.Codlocal == CodLocal);
-
-			return entidade;
+			return new RetornoOperacao();
 		}
 
 		public List<Local> GetAll()
 		{
 			return db.Locals.ToList();
-		}
-
-		public void Remove(int CodLocal)
-		{
-			Local entidadeSalva = db.Locals.FirstOrDefault(e => e.Codlocal == CodLocal);
-			if (entidadeSalva != null)
-			{
-				db.Locals.Remove(entidadeSalva);
-
-				db.SaveChanges();
-			}
 		}
 	}
 }

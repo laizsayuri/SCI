@@ -13,16 +13,20 @@ namespace SCI_Controllers.Controllers
 			db = new sciContext();
 		}
 
-		public void Save(Funcionario funcionario)
+		public RetornoOperacao Save(Funcionario funcionario)
 		{
-			funcionario.Senha = funcionario.Senha.ToMD5();
+			if (db.Clientes.Any(e => e.Email == funcionario.Email) || db.Funcionarios.Any(e => e.Email == funcionario.Email))
+				return new RetornoOperacao(false, "O email já está sendo usado!");
 
+			string senha = Helper.GerarSenha();
+			funcionario.Senha = senha.ToMD5();
 			db.Funcionarios.Add(funcionario);
 
 			db.SaveChanges();
+			return new RetornoOperacao(true, $"Funcionário criado com sucesso! Senha gerada: {senha}");
 		}
 
-		public void Edit(Funcionario funcionario)
+		public RetornoOperacao Edit(Funcionario funcionario)
 		{
 			Funcionario entidadeSalva = db.Funcionarios.FirstOrDefault(e => e.Codfuncionario == funcionario.Codfuncionario);
 			if (entidadeSalva != null)
@@ -33,20 +37,11 @@ namespace SCI_Controllers.Controllers
 
 				db.SaveChanges();
 			}
+
+			return new RetornoOperacao(true, "Funcionário editado com Sucesso!");
 		}
 
-		public void EditSenha(Funcionario funcionario)
-		{
-			Funcionario entidadeSalva = db.Funcionarios.FirstOrDefault(e => e.Codfuncionario == funcionario.Codfuncionario);
-			if (entidadeSalva != null)
-			{
-				entidadeSalva.Senha = funcionario.Senha.ToMD5();
-
-				db.SaveChanges();
-			}
-		}
-
-		public Funcionario GetById(int CodFuncionario)
+		public Funcionario GetByCod(int CodFuncionario)
 		{
 			Funcionario entidade = db.Funcionarios.FirstOrDefault(e => e.Codfuncionario == CodFuncionario);
 
@@ -62,7 +57,7 @@ namespace SCI_Controllers.Controllers
 
 		public List<Funcionario> GetAll()
 		{
-			return db.Funcionarios.ToList();
+			return db.Funcionarios.Where(f => !f.Admin).ToList();
 		}
 
 		public void Remove(int CodFuncionario)
